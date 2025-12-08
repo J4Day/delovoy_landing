@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЕЛОВОЙ — Бизнес-центр класса B в Бишкеке</title>
+    <meta name="description" content="Премиальный бизнес-центр в центре Бишкека. 9 этажей, 23 офиса, от $2300/м². Сдача Q3 2026.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <img src="assets/images/logo-white.png" alt="Деловой" class="loader-logo">
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="header-logo">
+                <img src="assets/images/logo-white.png" alt="Деловой">
+            </a>
+
+            <nav class="header-nav" id="nav">
+                <a href="#about" class="header-nav-link">О проекте</a>
+                <a href="#advantages" class="header-nav-link">Преимущества</a>
+                <a href="#plans" class="header-nav-link">Планировки</a>
+                <a href="#gallery" class="header-nav-link">Галерея</a>
+                <a href="#pricing" class="header-nav-link">Цены</a>
+                <a href="#contact" class="header-nav-link">Контакты</a>
+            </nav>
+
+            <a href="tel:+996557557790" class="header-phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+996 557 557 790</span>
+            </a>
+
+            <button class="header-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="assets/images/building-night.jpg" alt="" class="hero-bg-image">
+            <div class="hero-bg-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span class="hero-label-dot"></span>
+                    Бизнес-центр класса B
+                </div>
+
+                <h1 class="hero-title">
+                    Офисное пространство<br>
+                    <span>премиум-класса</span>
+                </h1>
+
+                <p class="hero-text">
+                    9-этажный бизнес-центр в стиле хайтек с панорамным остеклением,
+                    подземным паркингом и эксплуатируемой кровлей в центре Бишкека
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-accent btn-lg">
+                        Получить консультацию
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14m-7-7 7 7-7 7"/></svg>
+                    </a>
+                    <a href="#plans" class="btn btn-outline btn-lg">Смотреть планировки</a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Горького 99</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                        <span>Сдача Q3 2026</span>
+                    </div>
+                    <div class="hero-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <span>от $2 000/м²</span>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">9</span>
+                        <span class="hero-stat-label">этажей</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">23</span>
+                        <span class="hero-stat-label">офиса</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">3 795</span>
+                        <span class="hero-stat-label">м²</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">33</span>
+                        <span class="hero-stat-label">места</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <img src="assets/images/building-summer.jpg" alt="БЦ Деловой">
+                    </div>
+                    <div class="about-badge">
+                        <div class="about-badge-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+                        </div>
+                        <div class="about-badge-content">
+                            <span class="about-badge-label">Архитектура</span>
+                            <span class="about-badge-value">Hi-Tech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="section-label">О проекте</div>
+                    <h2 class="section-title">Бизнес-центр<br><span>«Деловой»</span></h2>
+
+                    <p class="about-text">
+                        Современный 9-этажный бизнес-центр класса B, спроектированный для комфортной работы
+                        компаний любого масштаба. Панорамные окна 5×3 метра обеспечивают максимальное
+                        естественное освещение. Расположен на пересечении улиц Горького и Ашхабадской.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="about-highlight">
+                            <div class="about-highlight-value">8<span>баллов</span></div>
+                            <div class="about-highlight-label">Сейсмоустойчивость по шкале MSK-64</div>
+                        </div>
+                        <div class="about-highlight">
+                            <div class="about-highlight-value">100<span>%</span></div>
+                            <div class="about-highlight-label">Документация и разрешения готовы</div>
+                        </div>
+                        <div class="about-highlight">
+                            <div class="about-highlight-value">0<span>%</span></div>
+                            <div class="about-highlight-label">Переплата при рассрочке 12 мес</div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-dark">
+                        Скачать презентацию
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Преимущества</div>
+                <h2 class="section-title">Всё для <span>вашего бизнеса</span></h2>
+                <p class="section-text">Продуманная инфраструктура и современные инженерные системы</p>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-card advantage-card-large advantage-card-lift">
+                    <div class="advantage-card-content">
+                        <div class="advantage-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 8l3-3 3 3M9 16l3 3 3-3M12 5v14"/></svg>
+                        </div>
+                        <h3 class="advantage-card-title">2 лифта GiantKONE</h3>
+                        <p class="advantage-card-text">Скоростные лифты грузоподъёмностью 630 кг с чиповым доступом. Отделка из шлифованной нержавеющей стали, зеркальная передняя стена.</p>
+                        <div class="advantage-card-tag">С паркинга до 9 этажа</div>
+                    </div>
+                    <div class="advantage-card-image">
+                        <img src="assets/images/lift.webp" alt="Лифт GiantKONE">
+                    </div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">Бесперебойное питание</h3>
+                    <p class="advantage-card-text">Два трансформатора — основной и резервный гарантируют работу при отключениях</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">33 паркоместа</h3>
+                    <p class="advantage-card-text">18 подземных + 15 гостевых мест. Шлагбаум со считыванием номера</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">5G и оптоволокно</h3>
+                    <p class="advantage-card-text">Высокоскоростной интернет и телефония. Подключение от Кыргызтелеком</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">VRF климат-система</h3>
+                    <p class="advantage-card-text">Поэтажная система кондиционирования для комфортного микроклимата</p>
+                </div>
+
+                <div class="advantage-card advantage-card-wide">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">Терраса 380 м²</h3>
+                    <p class="advantage-card-text">Эксплуатируемая кровля с возможностью организации ресторана</p>
+                    <div class="advantage-card-tag">Уникальное предложение</div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">Автономное отопление</h3>
+                    <p class="advantage-card-text">Газовые котлы в подвале. Независимость от центрального отопления</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h3 class="advantage-card-title">Охрана и видеонаблюдение</h3>
+                    <p class="advantage-card-text">Охранная будка, 4 камеры, чип-ключи и электронное табло доступа</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Планировки</div>
+                <h2 class="section-title">Выберите <span>свой офис</span></h2>
+                <p class="section-text">Офисы от 47 до 350 м² с высотой потолков 3,3 метра</p>
+            </div>
+
+            <div class="plans-wrapper">
+                <div class="plans-tabs">
+                    <button class="plans-tab active" data-tab="typical">Типовой этаж (2-8)</button>
+                    <button class="plans-tab" data-tab="first">1 этаж (ритейл)</button>
+                    <button class="plans-tab" data-tab="parking">Подземный паркинг</button>
+                </div>
+
+                <div class="plans-view">
+                    <div class="plans-panel active" data-panel="typical">
+                        <div class="plans-image-wrapper">
+                            <img src="assets/images/plan/plan-tipovoy-3d.png" alt="Типовой этаж 3D" class="plans-image active" data-view="3d">
+                            <img src="assets/images/plan/plan-tipovoy-scheme.png" alt="Типовой этаж схема" class="plans-image" data-view="2d">
+                        </div>
+                        <div class="plans-toggle">
+                            <button class="plans-toggle-btn active" data-view="3d">3D визуализация</button>
+                            <button class="plans-toggle-btn" data-view="2d">Чертёж</button>
+                        </div>
+                    </div>
+
+                    <div class="plans-panel" data-panel="first">
+                        <div class="plans-image-wrapper">
+                            <img src="assets/images/plan/plan-1-etaj-3d.png" alt="1 этаж 3D" class="plans-image active" data-view="3d">
+                            <img src="assets/images/plan/plan-1-etaj-scheme.png" alt="1 этаж схема" class="plans-image" data-view="2d">
+                        </div>
+                        <div class="plans-toggle">
+                            <button class="plans-toggle-btn active" data-view="3d">3D визуализация</button>
+                            <button class="plans-toggle-btn" data-view="2d">Чертёж</button>
+                        </div>
+                    </div>
+
+                    <div class="plans-panel" data-panel="parking">
+                        <div class="plans-image-wrapper">
+                            <img src="assets/images/plan/plan-parking-3d.png" alt="Паркинг 3D" class="plans-image active" data-view="3d">
+                            <img src="assets/images/plan/plan-parking-scheme.png" alt="Паркинг схема" class="plans-image" data-view="2d">
+                        </div>
+                        <div class="plans-toggle">
+                            <button class="plans-toggle-btn active" data-view="3d">3D визуализация</button>
+                            <button class="plans-toggle-btn" data-view="2d">Чертёж</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plans-info">
+                    <div class="plans-info-item">
+                        <div class="plans-info-value">47 — 350 м²</div>
+                        <div class="plans-info-label">Площадь офисов</div>
+                    </div>
+                    <div class="plans-info-item">
+                        <div class="plans-info-value">3,3 м</div>
+                        <div class="plans-info-label">Высота потолков</div>
+                    </div>
+                    <div class="plans-info-item">
+                        <div class="plans-info-value">5 × 3 м</div>
+                        <div class="plans-info-label">Панорамные окна</div>
+                    </div>
+                    <div class="plans-info-item">
+                        <div class="plans-info-value">Алюминий</div>
+                        <div class="plans-info-label">Профиль окон (Турция)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Галерея</div>
+                <h2 class="section-title">Видео <span>о проекте</span></h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card gallery-card-main" data-video="assets/video/overview.mp4">
+                    <div class="gallery-card-image">
+                        <img src="assets/video/thumbnail/overview.jpg" alt="Обзор">
+                    </div>
+                    <div class="gallery-card-overlay">
+                        <div class="gallery-card-play">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-title">Полный обзор БЦ «Деловой»</div>
+                        <div class="gallery-card-meta">Видео • 2:45</div>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-video="assets/video/office_info.mp4">
+                    <div class="gallery-card-image">
+                        <img src="assets/video/thumbnail/office_info.jpg" alt="Офисы">
+                    </div>
+                    <div class="gallery-card-overlay">
+                        <div class="gallery-card-play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-title">Информация об офисах</div>
+                        <div class="gallery-card-meta">Видео • 1:30</div>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-video="assets/video/plan.mp4">
+                    <div class="gallery-card-image">
+                        <img src="assets/video/thumbnail/plan.jpg" alt="Планировки">
+                    </div>
+                    <div class="gallery-card-overlay">
+                        <div class="gallery-card-play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-title">3D планировки этажей</div>
+                        <div class="gallery-card-meta">Видео • 1:15</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <video id="modalVideo" controls></video>
+        </div>
+    </div>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-orb pricing-orb-1"></div>
+        <div class="pricing-orb pricing-orb-2"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Стоимость</div>
+                <h2 class="section-title">Условия <span>покупки</span></h2>
+                <p class="section-text">Гибкие варианты оплаты. ДДУ оформляется у нотариуса застройщика</p>
+            </div>
+
+            <div class="pricing-grid pricing-grid-2">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <div class="pricing-card-type">100% оплата</div>
+                        <div class="pricing-card-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">2 000</span>
+                            <span class="price-period">/м²</span>
+                        </div>
+                        <div class="pricing-card-note">Наличный или безналичный расчёт</div>
+                    </div>
+                    <ul class="pricing-card-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            Максимальная выгода — экономия от $7 000
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            Фиксация цены на момент покупки
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            Приоритетный выбор офисов
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Узнать подробнее</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <div class="pricing-card-type">Рассрочка 12 месяцев</div>
+                        <div class="pricing-card-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">2 100</span>
+                            <span class="price-period">/м²</span>
+                        </div>
+                        <div class="pricing-card-note">Без переплат и скрытых комиссий</div>
+                    </div>
+                    <ul class="pricing-card-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            Гибкий график ежемесячных платежей
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            ДДУ у нотариуса застройщика
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            Технический паспорт после ввода
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-accent btn-block">Оформить рассрочку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment -->
+    <section class="investment" id="investment">
+        <div class="investment-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Инвестиции</div>
+                <h2 class="section-title">Инвестиционный <span>потенциал</span></h2>
+                <p class="section-text">Коммерческая недвижимость — надёжный актив с высокой доходностью</p>
+            </div>
+
+            <div class="investment-grid">
+                <div class="investment-main">
+                    <div class="investment-chart">
+                        <div class="investment-chart-bar" data-value="85">
+                            <div class="investment-chart-fill"></div>
+                            <span class="investment-chart-label">Рост стоимости недвижимости</span>
+                            <span class="investment-chart-value">+35%</span>
+                        </div>
+                        <div class="investment-chart-bar" data-value="70">
+                            <div class="investment-chart-fill"></div>
+                            <span class="investment-chart-label">Средняя доходность аренды</span>
+                            <span class="investment-chart-value">8-12%</span>
+                        </div>
+                        <div class="investment-chart-bar" data-value="95">
+                            <div class="investment-chart-fill"></div>
+                            <span class="investment-chart-label">Заполняемость БЦ класса B</span>
+                            <span class="investment-chart-value">92%</span>
+                        </div>
+                    </div>
+                    <p class="investment-note">* Данные за 2023-2024 гг. по рынку коммерческой недвижимости Бишкека</p>
+                </div>
+
+                <div class="investment-cards">
+                    <div class="investment-card">
+                        <div class="investment-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div class="investment-card-content">
+                            <h4 class="investment-card-title">Защита от инфляции</h4>
+                            <p class="investment-card-text">Недвижимость сохраняет и приумножает капитал в любых экономических условиях</p>
+                        </div>
+                    </div>
+
+                    <div class="investment-card">
+                        <div class="investment-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="investment-card-content">
+                            <h4 class="investment-card-title">Стабильный доход</h4>
+                            <p class="investment-card-text">Арендный поток от $12-15 за м² в месяц в центре города</p>
+                        </div>
+                    </div>
+
+                    <div class="investment-card">
+                        <div class="investment-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div class="investment-card-content">
+                            <h4 class="investment-card-title">Высокий спрос</h4>
+                            <p class="investment-card-text">Растущий сегмент IT и финтех компаний ищет качественные офисы</p>
+                        </div>
+                    </div>
+
+                    <div class="investment-card">
+                        <div class="investment-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="investment-card-content">
+                            <h4 class="investment-card-title">Премиальная локация</h4>
+                            <p class="investment-card-text">Центр города — гарантия ликвидности и востребованности</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="investment-cta">
+                <div class="investment-cta-content">
+                    <h3 class="investment-cta-title">Окупаемость инвестиций</h3>
+                    <p class="investment-cta-text">При покупке офиса 50 м² за $100 000 и сдаче в аренду по $15/м² — возврат инвестиций за 9-11 лет с последующим пассивным доходом</p>
+                </div>
+                <a href="#contact" class="btn btn-accent btn-lg">
+                    Рассчитать доходность
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14m-7-7 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-content">
+                    <div class="section-label">Расположение</div>
+                    <h2 class="section-title">Центр <span>Бишкека</span></h2>
+                    <p class="location-text">
+                        Бизнес-центр расположен на пересечении улиц Горького и Ашхабадской —
+                        в деловом сердце города с развитой инфраструктурой.
+                    </p>
+
+                    <div class="location-features">
+                        <div class="location-feature">
+                            <div class="location-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            </div>
+                            <span>Банки и финансовые учреждения</span>
+                        </div>
+                        <div class="location-feature">
+                            <div class="location-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            </div>
+                            <span>Государственные учреждения</span>
+                        </div>
+                        <div class="location-feature">
+                            <div class="location-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            </div>
+                            <span>Рестораны и кофейни</span>
+                        </div>
+                        <div class="location-feature">
+                            <div class="location-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                            </div>
+                            <span>Удобные подъездные пути</span>
+                        </div>
+                    </div>
+
+                    <div class="location-address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>г. Бишкек, ул. Горького 99</span>
+                    </div>
+                </div>
+
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.1234567890123!2d74.5900000!3d42.8700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDUyJzEyLjAiTiA3NMKwMzUnMjQuMCJF!5e0!3m2!1sru!2skg!4v1234567890123"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="location-map-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-wrapper">
+                <div class="faq-header">
+                    <div class="section-label">FAQ</div>
+                    <h2 class="section-title">Частые <span>вопросы</span></h2>
+                    <p class="section-text">Ответы на популярные вопросы о покупке и условиях</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Какие документы нужны для покупки?</span>
+                            <div class="faq-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Для оформления ДДУ потребуется только паспорт. Договор долевого участия оформляется у нотариуса застройщика. После ввода в эксплуатацию выдаётся технический паспорт на помещение.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Как работает рассрочка?</span>
+                            <div class="faq-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Рассрочка предоставляется на 12 месяцев без процентов и переплат. Первоначальный взнос — от 30%. График платежей гибкий и согласовывается индивидуально. Стоимость в рассрочку — $2100/м².</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Когда планируется сдача здания?</span>
+                            <div class="faq-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Сдача бизнес-центра планируется в третьем квартале 2026 года. Строительство ведётся в соответствии с графиком. Все разрешительные документы получены.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Какая отделка будет в офисах?</span>
+                            <div class="faq-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Офисы сдаются в состоянии ПСО (предчистовая отделка): выровненные стены, стяжка пола, разведённые коммуникации (электричество, вентиляция, отопление). Владелец самостоятельно выполняет чистовую отделку под свой дизайн.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Есть ли возможность перепланировки?</span>
+                            <div class="faq-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да, планировки офисов могут быть адаптированы под потребности бизнеса. Возможно объединение соседних помещений или разделение больших площадей. Все изменения согласовываются с застройщиком.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Как распределяются расходы на содержание здания?</span>
+                            <div class="faq-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Эксплуатационные расходы распределяются пропорционально площади офиса. Сюда входит: обслуживание лифтов, уборка общих зон, охрана, освещение мест общего пользования. Ориентировочная стоимость — $2-3 за м² в месяц.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="section-label">Свяжитесь с нами</div>
+                    <h2 class="section-title">Получите <span>консультацию</span></h2>
+                    <p class="contact-text">
+                        Оставьте заявку и наш менеджер свяжется с вами в течение 15 минут.
+                        Ответим на все вопросы и подберём оптимальный вариант.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-info-label">Отдел продаж</div>
+                                <div class="contact-info-value">г. Бишкек, ул. Разакова 7</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-info-label">Телефон</div>
+                                <div class="contact-info-value">+996 557 557 790</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-info-label">Время работы</div>
+                                <div class="contact-info-value">Пн—Сб: 10:00—18:00, Вс: выходной</div>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/delovoy_kg/" target="_blank" rel="noopener" class="contact-info-item contact-info-link">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </div>
+                            <div>
+                                <div class="contact-info-label">Instagram</div>
+                                <div class="contact-info-value">@delovoy_kg</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-title">Оставить заявку</div>
+
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="interest" name="interest" required>
+                                <option value="" disabled selected>Что вас интересует?</option>
+                                <option value="office">Покупка офиса</option>
+                                <option value="parking">Покупка паркинга</option>
+                                <option value="retail">Коммерческое помещение (1 этаж)</option>
+                                <option value="consult">Консультация</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Комментарий (необязательно)" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent btn-block btn-lg">
+                            Отправить заявку
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+
+                        <div class="form-note">
+                            Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-white.png" alt="Деловой" class="footer-logo">
+                    <p class="footer-desc">Премиальный бизнес-центр класса B в самом центре Бишкека. Современная архитектура, продуманная инфраструктура.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-nav-title">Навигация</div>
+                    <a href="#about">О проекте</a>
+                    <a href="#advantages">Преимущества</a>
+                    <a href="#plans">Планировки</a>
+                    <a href="#pricing">Стоимость</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-nav-title">Контакты</div>
+                    <a href="tel:+996557557790">+996 557 557 790</a>
+                    <span>Отдел продаж: Разакова 7</span>
+                    <span>Объект: Горького 99</span>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-nav-title">Время работы</div>
+                    <span>Пн—Сб: 10:00—18:00</span>
+                    <span>Воскресенье: выходной</span>
+                    <a href="https://www.instagram.com/delovoy_kg/" target="_blank" rel="noopener" class="footer-social">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        @delovoy_kg
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">© 2025 БЦ «Деловой». Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal modal-success" id="successModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container modal-container-sm">
+            <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            </div>
+            <div class="success-title">Заявка отправлена!</div>
+            <div class="success-text">Наш менеджер свяжется с вами в ближайшее время</div>
+            <button class="btn btn-accent" onclick="closeModal('successModal')">Отлично</button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
