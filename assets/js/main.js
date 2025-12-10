@@ -253,17 +253,33 @@ function initContactForm() {
         btn.innerHTML = '<span>Отправка...</span>';
         btn.disabled = true;
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name'),
+            phone: formData.get('phone'),
+            interest: formData.get('interest')
+        };
 
-        // Show success modal
-        if (successModal) {
-            successModal.classList.add('active');
-            document.body.classList.add('locked');
+        try {
+            const response = await fetch('https://delovoy-form.juuzoucode.workers.dev/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                if (successModal) {
+                    successModal.classList.add('active');
+                    document.body.classList.add('locked');
+                }
+                form.reset();
+            } else {
+                alert('Ошибка отправки. Попробуйте позже.');
+            }
+        } catch (error) {
+            alert('Ошибка соединения. Проверьте интернет.');
         }
 
-        // Reset form
-        form.reset();
         btn.innerHTML = originalHTML;
         btn.disabled = false;
     });
