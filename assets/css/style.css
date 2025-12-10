@@ -179,6 +179,7 @@ ul, ol { list-style: none; }
     color: var(--color-text-secondary);
     border-radius: 100px;
     transition: var(--transition);
+    white-space: nowrap;
 }
 .header-nav-link:hover {
     color: var(--color-text);
@@ -1097,6 +1098,11 @@ ul, ol { list-style: none; }
     border-radius: var(--radius-xl);
     transition: var(--transition);
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.pricing-card .btn {
+    margin-top: auto;
 }
 .pricing-card:hover {
     transform: translateY(-4px);
