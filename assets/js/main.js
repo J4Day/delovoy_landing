@@ -8,7 +8,6 @@
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    initLoader();
     initHeader();
     initNavigation();
     initPlanTabs();
@@ -18,28 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initFAQ();
 });
-
-// ============================================================================
-// LOADER
-// ============================================================================
-
-function initLoader() {
-    const loader = document.getElementById('loader');
-    if (!loader) return;
-
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loader.classList.add('hidden');
-            document.body.classList.remove('locked');
-        }, 1800);
-    });
-
-    // Fallback
-    setTimeout(() => {
-        loader.classList.add('hidden');
-        document.body.classList.remove('locked');
-    }, 3500);
-}
 
 // ============================================================================
 // HEADER

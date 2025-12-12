@@ -103,37 +103,6 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================================
-   Loader
-   ========================================================================== */
-.loader {
-    position: fixed;
-    inset: 0;
-    background: var(--color-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    transition: opacity 0.5s, visibility 0.5s;
-}
-.loader.hidden { opacity: 0; visibility: hidden; }
-.loader-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.loader-logo {
-    height: 72px;
-    margin: 0 auto 32px;
-    display: block;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-.loader-bar { width: 160px; height: 3px; background: var(--color-border); border-radius: 3px; overflow: hidden; }
-.loader-progress { height: 100%; width: 0; background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light)); border-radius: 3px; animation: loadProgress 1.8s ease forwards; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-@keyframes loadProgress { to { width: 100%; } }
-
-/* ==========================================================================
    Header
    ========================================================================== */
 .header {
@@ -159,7 +128,7 @@ ul, ol { list-style: none; }
     align-items: center;
     justify-content: space-between;
 }
-.header-logo img { height: 36px; }
+.header-logo img { height: 52px; }
 .header-nav {
     position: absolute;
     left: 50%;
@@ -1734,7 +1703,7 @@ ul, ol { list-style: none; }
     padding-bottom: 48px;
     border-bottom: 1px solid var(--color-border);
 }
-.footer-logo { height: 44px; margin-bottom: 24px; }
+.footer-logo { height: 32px; margin-bottom: 24px; }
 .footer-desc {
     font-size: 15px;
     color: var(--color-text-secondary);
