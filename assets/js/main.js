@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPlanTabs();
     initVideoGallery();
     initContactForm();
+    initRequestModal();
     initScrollAnimations();
     initFAQ();
 });
@@ -293,6 +294,115 @@ window.closeModal = function(modalId) {
         document.body.classList.remove('locked');
     }
 };
+
+// ============================================================================
+// REQUEST MODAL (Popup Form)
+// ============================================================================
+
+function initRequestModal() {
+    const modal = document.getElementById('requestModal');
+    const form = document.getElementById('requestForm');
+    const successModal = document.getElementById('successModal');
+    if (!modal) return;
+
+    const backdrop = modal.querySelector('.modal-backdrop');
+    const closeBtn = modal.querySelector('[data-close-modal]');
+    const openBtns = document.querySelectorAll('[data-open-modal="requestModal"]');
+
+    // Open modal
+    const openModal = () => {
+        modal.classList.add('active');
+        document.body.classList.add('locked');
+    };
+
+    // Close modal
+    const closeModalFn = () => {
+        modal.classList.remove('active');
+        document.body.classList.remove('locked');
+    };
+
+    // Attach open handlers
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+
+    // Attach close handlers
+    if (closeBtn) closeBtn.addEventListener('click', closeModalFn);
+    if (backdrop) backdrop.addEventListener('click', closeModalFn);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModalFn();
+        }
+    });
+
+    // Phone formatting
+    const phoneInput = form?.querySelector('input[name="phone"]');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.startsWith('996')) value = value.substring(3);
+            if (value.startsWith('0')) value = value.substring(1);
+
+            let formatted = '';
+            if (value.length > 0) formatted = '+996 ' + value.substring(0, 3);
+            if (value.length > 3) formatted += ' ' + value.substring(3, 6);
+            if (value.length > 6) formatted += ' ' + value.substring(6, 9);
+
+            e.target.value = formatted;
+        });
+
+        phoneInput.addEventListener('focus', (e) => {
+            if (!e.target.value) {
+                e.target.value = '+996 ';
+            }
+        });
+    }
+
+    // Form submission
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const btn = form.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+
+            btn.innerHTML = '<span>Отправка...</span>';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                interest: formData.get('interest')
+            };
+
+            try {
+                const response = await fetch('https://delovoy-form.juuzoucode.workers.dev/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    closeModalFn();
+                    if (successModal) {
+                        successModal.classList.add('active');
+                        document.body.classList.add('locked');
+                    }
+                    form.reset();
+                } else {
+                    alert('Ошибка отправки. Попробуйте позже.');
+                }
+            } catch (error) {
+                alert('Ошибка соединения. Проверьте интернет.');
+            }
+
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+        });
+    }
+}
 
 // ============================================================================
 // FAQ ACCORDION

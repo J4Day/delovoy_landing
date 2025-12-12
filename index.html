@@ -110,10 +110,10 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-accent btn-lg">
+                    <button type="button" class="btn btn-accent btn-lg btn-glow" data-open-modal="requestModal">
                         Получить консультацию
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14m-7-7 7 7-7 7"/></svg>
-                    </a>
+                    </button>
                     <a href="#plans" class="btn btn-outline btn-lg">Смотреть планировки</a>
                 </div>
 
@@ -201,7 +201,7 @@
                         </div>
                     </div>
 
-                    <a href="#contact" class="btn btn-dark">
+                    <a href="assets/catalog.pdf" download class="btn btn-dark">
                         Скачать каталог
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     </a>
@@ -476,7 +476,7 @@
                             Приоритетный выбор офисов
                         </li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline btn-block">Узнать подробнее</a>
+                    <button type="button" class="btn btn-outline btn-block" data-open-modal="requestModal">Узнать подробнее</button>
                 </div>
 
                 <div class="pricing-card">
@@ -503,7 +503,7 @@
                             Технический паспорт после ввода
                         </li>
                     </ul>
-                    <a href="#contact" class="btn btn-accent btn-block">Оформить рассрочку</a>
+                    <button type="button" class="btn btn-accent btn-block" data-open-modal="requestModal">Оформить рассрочку</button>
                 </div>
             </div>
         </div>
@@ -589,10 +589,10 @@
                     <h3 class="investment-cta-title">Окупаемость инвестиций</h3>
                     <p class="investment-cta-text">При покупке офиса 50 м² за $100 000 и сдаче в аренду по $19-22 м² — возврат инвестиций за 7-9 лет с последующим пассивным доходом</p>
                 </div>
-                <a href="#contact" class="btn btn-accent btn-lg">
+                <button type="button" class="btn btn-accent btn-lg" data-open-modal="requestModal">
                     Рассчитать доходность
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14m-7-7 7 7-7 7"/></svg>
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -862,6 +862,43 @@
             </div>
         </div>
     </footer>
+
+    <!-- Request Modal (Popup Form) -->
+    <div class="modal modal-form" id="requestModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container modal-container-form">
+            <button class="modal-close" data-close-modal>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="modal-form-header">
+                <div class="modal-form-title">Получить консультацию</div>
+                <div class="modal-form-subtitle">Оставьте заявку и мы перезвоним вам</div>
+            </div>
+            <form class="contact-form" id="requestForm">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                </div>
+                <div class="form-group">
+                    <select name="interest" required>
+                        <option value="" disabled selected>Планировка</option>
+                        <option value="47-100">от 47 до 100 м²</option>
+                        <option value="100-250">от 100 до 250 м²</option>
+                        <option value="250-350">от 250 до 350 м²</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-accent btn-block btn-lg">
+                    Отправить заявку
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+                <div class="form-note">
+                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Success Modal -->
     <div class="modal modal-success" id="successModal">

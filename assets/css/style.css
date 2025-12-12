@@ -280,6 +280,47 @@ ul, ol { list-style: none; }
     box-shadow: 0 12px 40px rgba(92, 124, 250, 0.35);
 }
 
+/* Hero CTA Glow Button */
+.btn-glow {
+    position: relative;
+    animation: btnGlowPulse 2.5s ease-in-out infinite;
+}
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 50%, var(--color-accent) 100%);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.6;
+    filter: blur(12px);
+    animation: btnGlowRing 2.5s ease-in-out infinite;
+}
+.btn-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-accent-dark) 0%, var(--color-accent) 100%);
+    border-radius: inherit;
+    z-index: -1;
+}
+.btn-glow:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(92, 124, 250, 0.5);
+}
+.btn-glow:hover::before {
+    opacity: 0.9;
+    filter: blur(18px);
+}
+@keyframes btnGlowPulse {
+    0%, 100% { box-shadow: 0 8px 32px rgba(92, 124, 250, 0.4); }
+    50% { box-shadow: 0 12px 48px rgba(92, 124, 250, 0.6); }
+}
+@keyframes btnGlowRing {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
 .btn-outline {
     background: transparent;
     border: 1px solid var(--color-border-light);
@@ -1051,6 +1092,50 @@ ul, ol { list-style: none; }
 }
 .success-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
 .success-text { color: var(--color-text-secondary); margin-bottom: 24px; }
+
+/* Request Modal (Popup Form) */
+.modal-form .modal-container-form {
+    max-width: 480px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    position: relative;
+}
+.modal-form .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    transition: var(--transition);
+}
+.modal-form .modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    transform: none;
+}
+.modal-form-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.modal-form-title {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.modal-form-subtitle {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+}
 
 /* ==========================================================================
    Pricing
