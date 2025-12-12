@@ -436,6 +436,7 @@ ul, ol { list-style: none; }
 }
 .hero-content {
     max-width: 100%;
+    width: 100%;
 }
 .hero-label {
     display: inline-flex;
@@ -490,12 +491,14 @@ ul, ol { list-style: none; }
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 48px;
+    width: 100%;
 }
 .hero-feature {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 12px 20px;
+    padding: 14px 24px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -503,6 +506,7 @@ ul, ol { list-style: none; }
     font-weight: 600;
     color: var(--color-text-secondary);
     transition: var(--transition);
+    flex: 1 1 0;
 }
 .hero-feature:hover {
     background: rgba(255, 255, 255, 0.06);
@@ -515,13 +519,19 @@ ul, ol { list-style: none; }
 }
 .hero-stats {
     display: flex;
-    gap: 48px;
-    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
 }
 .hero-stat {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 6px;
+    flex: 1 1 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
 }
 .hero-stat-value {
     font-family: var(--font-heading);
@@ -1872,9 +1882,9 @@ ul, ol { list-style: none; }
     .hero-stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+        gap: 12px;
     }
-    .hero-stat { align-items: flex-start; }
+    .hero-stat { align-items: center; padding: 16px; }
     .hero-stat-value { font-size: 32px; }
     .hero-stat-label { font-size: 12px; }
     .hero-scroll { display: none; }
@@ -1935,8 +1945,8 @@ ul, ol { list-style: none; }
     .hero-buttons { flex-direction: column; }
     .hero-buttons .btn { width: 100%; }
     .hero-features { flex-direction: column; gap: 8px; }
-    .hero-feature { width: 100%; justify-content: center; }
-    .hero-stats { gap: 20px; }
+    .hero-feature { width: 100%; }
+    .hero-stats { gap: 10px; }
     .hero-stat-value { font-size: 28px; }
 
     .section-title { font-size: 26px; }
