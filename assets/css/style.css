@@ -307,6 +307,20 @@ ul, ol { list-style: none; }
 }
 .btn-dark:hover { background: var(--color-bg-secondary); }
 
+.btn:disabled,
+.btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
+    box-shadow: none;
+}
+.btn:disabled:hover,
+.btn[disabled]:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 /* ==========================================================================
    Section Components
    ========================================================================== */

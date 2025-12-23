@@ -196,8 +196,36 @@ function initContactForm() {
     const successModal = document.getElementById('successModal');
     if (!form) return;
 
-    // Phone formatting for Kyrgyzstan
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const nameInput = document.getElementById('name');
     const phoneInput = document.getElementById('phone');
+    const interestSelect = document.getElementById('interest');
+
+    // Form validation function
+    const validateForm = () => {
+        const nameValid = nameInput && nameInput.value.trim().length >= 2;
+        const phoneDigits = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
+        const phoneValid = phoneDigits.length >= 12; // 996 + 9 digits
+        const interestValid = interestSelect && interestSelect.value !== '';
+
+        const isValid = nameValid && phoneValid && interestValid;
+
+        if (submitBtn) {
+            submitBtn.disabled = !isValid;
+        }
+
+        return isValid;
+    };
+
+    // Attach validation listeners
+    if (nameInput) {
+        nameInput.addEventListener('input', validateForm);
+    }
+    if (interestSelect) {
+        interestSelect.addEventListener('change', validateForm);
+    }
+
+    // Phone formatting for Kyrgyzstan
     if (phoneInput) {
         phoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
@@ -212,6 +240,8 @@ function initContactForm() {
             if (value.length > 6) formatted += ' ' + value.substring(6, 9);
 
             e.target.value = formatted;
+
+            validateForm();
         });
 
         phoneInput.addEventListener('focus', (e) => {
@@ -220,6 +250,9 @@ function initContactForm() {
             }
         });
     }
+
+    // Initial validation
+    validateForm();
 
     // Form submission
     form.addEventListener('submit', async (e) => {
@@ -251,15 +284,18 @@ function initContactForm() {
                     document.body.classList.add('locked');
                 }
                 form.reset();
+                btn.innerHTML = originalHTML;
+                btn.disabled = true; // Reset to disabled after form reset
             } else {
                 alert('Ошибка отправки. Попробуйте позже.');
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
             }
         } catch (error) {
             alert('Ошибка соединения. Проверьте интернет.');
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
         }
-
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
     });
 }
 
@@ -285,6 +321,37 @@ function initRequestModal() {
     const backdrop = modal.querySelector('.modal-backdrop');
     const closeBtn = modal.querySelector('[data-close-modal]');
     const openBtns = document.querySelectorAll('[data-open-modal="requestModal"]');
+
+    const submitBtn = form?.querySelector('button[type="submit"]');
+    const nameInput = form?.querySelector('input[name="name"]');
+    const phoneInput = form?.querySelector('input[name="phone"]');
+    const interestSelect = form?.querySelector('select[name="interest"]');
+
+    // Form validation function
+    const validateForm = () => {
+        if (!form) return false;
+
+        const nameValid = nameInput && nameInput.value.trim().length >= 2;
+        const phoneDigits = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
+        const phoneValid = phoneDigits.length >= 12; // 996 + 9 digits
+        const interestValid = interestSelect && interestSelect.value !== '';
+
+        const isValid = nameValid && phoneValid && interestValid;
+
+        if (submitBtn) {
+            submitBtn.disabled = !isValid;
+        }
+
+        return isValid;
+    };
+
+    // Attach validation listeners
+    if (nameInput) {
+        nameInput.addEventListener('input', validateForm);
+    }
+    if (interestSelect) {
+        interestSelect.addEventListener('change', validateForm);
+    }
 
     // Open modal
     const openModal = () => {
@@ -314,7 +381,6 @@ function initRequestModal() {
     });
 
     // Phone formatting
-    const phoneInput = form?.querySelector('input[name="phone"]');
     if (phoneInput) {
         phoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
@@ -327,6 +393,8 @@ function initRequestModal() {
             if (value.length > 6) formatted += ' ' + value.substring(6, 9);
 
             e.target.value = formatted;
+
+            validateForm();
         });
 
         phoneInput.addEventListener('focus', (e) => {
@@ -335,6 +403,9 @@ function initRequestModal() {
             }
         });
     }
+
+    // Initial validation
+    validateForm();
 
     // Form submission
     if (form) {
@@ -368,15 +439,18 @@ function initRequestModal() {
                         document.body.classList.add('locked');
                     }
                     form.reset();
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = true; // Reset to disabled after form reset
                 } else {
                     alert('Ошибка отправки. Попробуйте позже.');
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
                 }
             } catch (error) {
                 alert('Ошибка соединения. Проверьте интернет.');
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
             }
-
-            btn.innerHTML = originalHTML;
-            btn.disabled = false;
         });
     }
 }
