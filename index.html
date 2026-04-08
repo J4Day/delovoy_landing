@@ -100,9 +100,17 @@
 
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
+                <h1 class="hero-title" id="heroTitle">
                     Продуманные планировки от&nbsp;82,5&nbsp;м² <span>и панорамные виды, которые подчёркивают уровень вашего бизнеса.</span>
                 </h1>
+                <script>
+                    (function() {
+                        var p = new URLSearchParams(window.location.search);
+                        if (p.get('v') === '2') {
+                            document.getElementById('heroTitle').innerHTML = 'Функциональные планировки от\u00a082.5\u00a0кв\u00a0м <span>в локации с высокой деловой активностью и удобной транспортной развязкой.</span>';
+                        }
+                    })();
+                </script>
 
                 <div class="hero-buttons">
                     <a href="#plans" class="btn btn-accent btn-lg">
